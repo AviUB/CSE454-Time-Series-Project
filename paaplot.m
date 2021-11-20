@@ -23,11 +23,12 @@ function  paaplot(paa, data, ns, dt, c, i)
         paay(z)=paa(i,n);
         z=z+1;
     end
-        paax(z)=paax(z-1);
-        paay(z)=paa(i,n);
-        z=z+1;
-        paax(z)=paax(z-1)+slen;
-        paay(z)=paa(i,n);
+    % last segment
+    paax(z)=paax(z-1);
+    paay(z)=paa(i,n);
+    z=z+1;
+    paax(z)=paax(z-1)+slen;
+    paay(z)=paa(i,n);
     % plot each observation's (x,y)
     plot(paax,paay);
     hold on
